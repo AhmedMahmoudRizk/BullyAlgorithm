@@ -20,6 +20,7 @@ Based on the requirements it’s not allowed to use threading, so decided to use
 Each time the server creates an object, it registers this object with the RMIregistry (using** bind() **method). These are registered using a unique name known as bind name. To invoke a remote object, the client needs a reference of that object. At that time, the client fetches the object from the registry using its bind name (using **lookup()** method).<br /><br />
 The client and server program is executed on the same machine so localhost is used. In order to access the remote object from another machine, localhost is to be replaced with the IP address where the remote object is present.<br /><br />
 
+![GitHub Logo](/imgs/img1.png)
 
 ## RMI Pros 
 
@@ -36,12 +37,14 @@ The stub object on the client machine builds an information block and sends this
 ### Skeleton Object
 The skeleton object passes the request from the stub object to the remote object. It performs the following tasks: It calls the desired method on the real object present on the server. It forwards the parameters received from the stub object to the method.<br />
 
+![GitHub Logo](/imgs/img2.png)
 
 Based on the concept of client and server in rmi and applying it on the processes. the project was built as each process can run as a client that have access on the methods in the server and receive replies when the process act as ordinary process so it need to send messages to the coordinator, and also each process start the election act like server which check the other processes which have id’s greater than its.
 
 
 ## Class Diagram
 
+![GitHub Logo](/imgs/img3.png)
 
 ## Implementation <br />
 
